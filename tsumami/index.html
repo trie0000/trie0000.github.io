@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>つまみん - つまみ細工デザインツール</title>
+    <meta name="description" content="つまみ細工の花デザインをブラウザ上で作成・編集できるツールです。花びらの配置、色、レイヤー構成を自由に設計し、レシピとして出力できます。" />
+    <meta name="theme-color" content="#FFF0F5" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" />
+
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/svg+xml" href="/tsumami/favicon.svg" />
+    <link rel="apple-touch-icon" href="/tsumami/favicon.svg" />
+    <link rel="manifest" href="/tsumami/manifest.json" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="つまみん - つまみ細工デザインツール" />
+    <meta property="og:description" content="つまみ細工の花デザインをブラウザ上で作成・編集できるツール。花びらの配置、色、レイヤー構成を自由に設計。" />
+    <meta property="og:image" content="/tsumami/og-image.svg" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="つまみん - つまみ細工デザインツール" />
+    <meta name="twitter:description" content="つまみ細工の花デザインをブラウザ上で作成・編集できるツール。" />
+    <meta name="twitter:image" content="/tsumami/og-image.svg" />
+    <script type="module" crossorigin src="/tsumami/assets/index-CftkcJs1.js"></script>
+    <link rel="stylesheet" crossorigin href="/tsumami/assets/index-BmvASTMQ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/tsumami/sw.js").catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>

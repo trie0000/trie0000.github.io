@@ -1,0 +1,20 @@
+{
+  "name": "つまみん - つまみ細工デザインツール",
+  "short_name": "つまみん",
+  "description": "つまみ細工の花デザインをブラウザ上で作成・編集できるツール",
+  "start_url": "/tsumami/",
+  "scope": "/tsumami/",
+  "display": "standalone",
+  "background_color": "#FFF0F5",
+  "theme_color": "#FFF0F5",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "/tsumami/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["design", "lifestyle"]
+}
