@@ -1,5 +1,5 @@
 // Service Worker for つまみん PWA
-const CACHE_NAME = "tsumamin-v1";
+const CACHE_NAME = "tsumamin-v2";
 
 // Install: cache shell assets
 self.addEventListener("install", (event) => {
