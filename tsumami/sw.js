@@ -1,7 +1,8 @@
 // Service Worker for つまみん PWA
-const CACHE_NAME = "tsumamin-v4";
+// 全リクエスト network-first: 常に最新を取得、オフライン時のみキャッシュ利用
+const CACHE_NAME = "tsumamin-v5";
 
-// Install: cache shell assets
+// Install: cache shell assets for offline use
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) =>
@@ -26,36 +27,20 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// Fetch: network-first for navigation, cache-first for assets
+// Fetch: network-first for ALL requests
+// ネットワーク優先: 成功したらキャッシュ更新、失敗時のみキャッシュから返す
 self.addEventListener("fetch", (event) => {
-  const { request } = event;
-
-  // Navigation requests: network first, fall back to cache
-  if (request.mode === "navigate") {
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
-          return response;
-        })
-        .catch(() => caches.match(request))
-    );
-    return;
-  }
-
-  // Static assets: cache first, fall back to network
-  if (request.destination === "script" || request.destination === "style" || request.destination === "image") {
-    event.respondWith(
-      caches.match(request).then((cached) => {
-        if (cached) return cached;
-        return fetch(request).then((response) => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
-          return response;
-        });
+  event.respondWith(
+    fetch(event.request)
+      .then((response) => {
+        // ネットワーク成功: キャッシュを更新して返す
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+        return response;
       })
-    );
-    return;
-  }
+      .catch(() => {
+        // オフライン: キャッシュから返す
+        return caches.match(event.request);
+      })
+  );
 });
