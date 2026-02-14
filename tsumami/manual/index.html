@@ -493,14 +493,17 @@
                             <li class="toc-level-2"><a href="#layout">3.1 3パネルレイアウト</a></li>
                             <li class="toc-level-2"><a href="#canvas">3.2 キャンバス操作</a></li>
                             <li class="toc-level-2"><a href="#flower-ops">3.3 花の操作</a></li>
-                            <li class="toc-level-2"><a href="#zone-ops">3.4 ゾーン操作</a></li>
-                            <li class="toc-level-2"><a href="#layer-panel">3.5 レイヤーパネル</a></li>
-                            <li class="toc-level-2"><a href="#property-panel">3.6 プロパティパネル</a></li>
-                            <li class="toc-level-2"><a href="#petal-shapes">3.7 花びらの形</a></li>
-                            <li class="toc-level-2"><a href="#center">3.8 花芯</a></li>
-                            <li class="toc-level-2"><a href="#color-palette">3.9 カラーパレット</a></li>
-                            <li class="toc-level-2"><a href="#stencil">3.10 台紙</a></li>
-                            <li class="toc-level-2"><a href="#petal-sizing">3.11 花びらサイズ調整</a></li>
+                            <li class="toc-level-2"><a href="#leaf-ops">3.4 葉の操作</a></li>
+                            <li class="toc-level-2"><a href="#group-ops">3.5 グループ機能</a></li>
+                            <li class="toc-level-2"><a href="#zone-ops">3.6 ゾーン操作</a></li>
+                            <li class="toc-level-2"><a href="#layer-panel">3.7 レイヤーパネル</a></li>
+                            <li class="toc-level-2"><a href="#property-panel">3.8 プロパティパネル</a></li>
+                            <li class="toc-level-2"><a href="#petal-shapes">3.9 花びらの形</a></li>
+                            <li class="toc-level-2"><a href="#double-petal">3.10 二重花びら</a></li>
+                            <li class="toc-level-2"><a href="#center">3.11 花芯</a></li>
+                            <li class="toc-level-2"><a href="#color-palette">3.12 カラーパレット</a></li>
+                            <li class="toc-level-2"><a href="#stencil">3.13 台紙</a></li>
+                            <li class="toc-level-2"><a href="#petal-sizing">3.14 花びらサイズ調整</a></li>
                         </ul>
                     </li>
                     <li><a href="#recipe">4. レシピ画面</a></li>
@@ -737,7 +740,76 @@
                     レイヤーパネルの「−」ボタンでも削除できます。
                 </p>
 
-                <h3 id="zone-ops">3.4 ゾーン操作（花びらのドラッグ操作）</h3>
+                <h3 id="leaf-ops">3.4 葉の操作</h3>
+                <p>
+                    花だけでなく、個別の「葉」をキャンバスに配置できます。
+                    葉は単独の花びらとして描画され、花の周りに自由に配置して作品を彩ることができます。
+                </p>
+
+                <h4>葉の追加</h4>
+                <p>
+                    レイヤーパネルの葉アイコン「🍃+」ボタンをクリックすると、新しい葉が追加されます。
+                </p>
+
+                <h4>葉のプロパティ</h4>
+                <ul>
+                    <li><strong>名前</strong> - 葉の名前</li>
+                    <li><strong>花びらの形</strong> - 丸つまみ / 剣つまみの切り替え</li>
+                    <li><strong>色</strong> - 葉の色（カラーパレットから選択）</li>
+                    <li><strong>生地サイズ</strong> - 葉を作る生地のサイズ（mm）</li>
+                    <li><strong>サイズ倍率</strong> - 葉のサイズ倍率</li>
+                    <li><strong>横幅</strong> - 葉の横幅倍率</li>
+                    <li><strong>角度</strong> - 葉の回転角度</li>
+                    <li><strong>表示/ロック</strong> - 表示/非表示とロック制御</li>
+                    <li><strong>二重花びら</strong> - 内側にもう1枚重ねて二重にする設定</li>
+                </ul>
+
+                <h4>葉の操作</h4>
+                <ul>
+                    <li><strong>移動</strong> - ドラッグで位置を変更</li>
+                    <li><strong>回転</strong> - 先端をドラッグして回転</li>
+                    <li><strong>サイズ変更</strong> - 根元をドラッグしてサイズ変更</li>
+                    <li><strong>横幅変更</strong> - 側面をドラッグして横幅を変更</li>
+                    <li><strong>削除</strong> - 選択して <kbd>Delete</kbd> キーまたはゴミ箱アイコンで削除</li>
+                </ul>
+
+                <div class="tip-box">
+                    葉もShiftクリックで複数選択できます。花と葉を同時に選択すると「混合選択」状態になり、まとめてグループ化できます。
+                </div>
+
+                <h3 id="group-ops">3.5 グループ機能</h3>
+                <p>
+                    複数の花や葉をグループとしてまとめることができます。
+                    グループ化すると、メンバーの一括編集や一括移動が可能になります。
+                </p>
+
+                <h4>グループの作成</h4>
+                <ul>
+                    <li><strong>Shiftクリックで複数選択</strong> → プロパティパネルの「グループ化」ボタンをクリック</li>
+                    <li><strong>レイヤーツリーでドラッグ&ドロップ</strong> → アイテムを別のアイテムに重ねるとグループが作成されます</li>
+                </ul>
+
+                <h4>グループの種類</h4>
+                <ul>
+                    <li><strong>花のみのグループ</strong> - 花だけを含むグループ（🌸アイコン）</li>
+                    <li><strong>葉のみのグループ</strong> - 葉だけを含むグループ（🍃アイコン）</li>
+                    <li><strong>混合グループ</strong> - 花と葉を両方含むグループ（🌸🍃アイコン）</li>
+                </ul>
+
+                <h4>グループの操作</h4>
+                <ul>
+                    <li><strong>一括編集</strong> - グループ選択時にプロパティパネルからメンバー全員の色、形、サイズなどを一括変更</li>
+                    <li><strong>グループに追加</strong> - ドラッグ&ドロップでアイテムをグループに追加</li>
+                    <li><strong>グループから除外</strong> - メンバーをグループ外にドラッグ&ドロップ</li>
+                    <li><strong>グループ解除</strong> - グループをバラバラの個別アイテムに戻す</li>
+                    <li><strong>グループ結合</strong> - 複数のグループを1つに統合</li>
+                </ul>
+
+                <div class="tip-box">
+                    レイヤーツリーでグループの▶をクリックすると、メンバー一覧を展開表示できます。グループ内でもドラッグ&ドロップで並び順を変更できます。
+                </div>
+
+                <h3 id="zone-ops">3.6 ゾーン操作（花びらのドラッグ操作）</h3>
 
                 <div class="important-box">
                     つまみんの最も重要な機能の一つです。花びらをドラッグする位置によって、異なる操作が実行されます。
@@ -800,7 +872,7 @@
                     normXとnormYは、花びらの中心からの相対位置を表す正規化された座標です。カーソルの位置がこの値によって自動判定され、適切な操作モードに切り替わります。
                 </div>
 
-                <h3 id="layer-panel">3.5 レイヤーパネル</h3>
+                <h3 id="layer-panel">3.7 レイヤーパネル</h3>
                 <p>
                     レイヤーパネルには、プロジェクト全体の階層構造がツリー形式で表示されます。
                 </p>
@@ -824,8 +896,9 @@
 
                 <h4>レイヤーパネルのボタン</h4>
                 <ul>
-                    <li><strong>+ ボタン</strong> - 新しい花を追加</li>
-                    <li><strong>− ボタン</strong> - 選択中の要素を削除</li>
+                    <li><strong>🌸+ ボタン</strong> - 新しい花を追加</li>
+                    <li><strong>🍃+ ボタン</strong> - 新しい葉を追加</li>
+                    <li><strong>削除ボタン</strong> - 選択中の要素を削除</li>
                     <li><strong>コピーボタン</strong> - 選択中の花をコピー</li>
                     <li><strong>ペーストボタン</strong> - コピーした花をペースト</li>
                     <li><strong>最前面ボタン</strong> - 選択中の花を最前面に移動</li>
@@ -841,7 +914,22 @@
                     ロックをオンにすると、そのレイヤーは編集できなくなります。
                 </p>
 
-                <h3 id="property-panel">3.6 プロパティパネル</h3>
+                <h4>ドラッグ&ドロップ並べ替え</h4>
+                <p>
+                    レイヤーツリーのアイテム（花・葉・グループ）をドラッグ&ドロップして描画順序（Z順序）を変更できます。
+                </p>
+                <ul>
+                    <li><strong>アイテム間にドロップ</strong> - 行の上半分・下半分にドロップすると、その位置に移動します</li>
+                    <li><strong>アイテムの上にドロップ</strong> - 行の中央にドロップすると、新しいグループが作成されます</li>
+                    <li><strong>グループヘッダーにドロップ</strong> - グループに追加されます</li>
+                    <li><strong>グループ内で並べ替え</strong> - グループのメンバー同士も並べ替え可能です</li>
+                </ul>
+
+                <div class="tip-box">
+                    ツリーの接続線（青い線）は、花とそのレイヤー間、またグループとそのメンバー間の親子関係を視覚的に示しています。
+                </div>
+
+                <h3 id="property-panel">3.8 プロパティパネル</h3>
                 <p>
                     プロパティパネルには、選択中の要素に応じた編集可能なプロパティが表示されます。
                 </p>
@@ -883,6 +971,8 @@
                     <li><strong>横幅</strong> - 花びらの横幅倍率</li>
                     <li><strong>角度</strong> - 花全体の回転角度</li>
                     <li><strong>色</strong> - 花全体の基本色</li>
+                    <li><strong>配置モード</strong> - 半くす（球面配置）/ 平面の切り替え</li>
+                    <li><strong>二重花びら</strong> - 内側にもう1枚重ねて二重にする設定</li>
                     <li><strong>花芯</strong> - 花の中心部分の設定（パール/座金/ペップ）</li>
                     <li><strong>花びらサイズ調整</strong> - 半くす配置時の生地サイズ調整モード</li>
                 </ul>
@@ -923,7 +1013,7 @@
                     <li><strong>形の個別変更</strong> - この花びらだけ異なる形にする</li>
                 </ul>
 
-                <h3 id="petal-shapes">3.7 花びらの形</h3>
+                <h3 id="petal-shapes">3.9 花びらの形</h3>
                 <p>
                     つまみんでは、2種類の花びらの形を選択できます。
                 </p>
@@ -946,7 +1036,28 @@
                     花全体の形を変更することも、レイヤーごとに異なる形を使うことも、個々の花びらだけ形を変えることもできます。
                 </div>
 
-                <h3 id="center">3.8 花芯（Center）</h3>
+                <h3 id="double-petal">3.10 二重花びら</h3>
+                <p>
+                    花びらを二重に重ねて、より豪華な見た目にすることができます。
+                    花全体（全レイヤー一括）または個別の葉に対して設定できます。
+                </p>
+
+                <h4>設定方法</h4>
+                <p>
+                    花または葉のプロパティパネルで「二重花びら」チェックボックスをオンにすると、各花びらの内側にもう1枚小さな花びらが重なって描画されます。
+                </p>
+
+                <h4>設定項目</h4>
+                <ul>
+                    <li><strong>生地の縮小サイズ (mm)</strong> - 内側の花びらを外側より何mm小さい生地で作るか（1〜30mm）</li>
+                    <li><strong>色</strong> - 内側の花びらの色（外側とは異なる色を選択可能）</li>
+                </ul>
+
+                <div class="tip-box">
+                    二重花びらをオフに戻しても、設定値は一時的に保存されます。再度オンにすると、以前の設定が復元されます。
+                </div>
+
+                <h3 id="center">3.11 花芯（Center）</h3>
                 <p>
                     花の中心部分には、3種類の花芯を設定できます。
                 </p>
@@ -968,7 +1079,7 @@
                     <li><strong>色</strong> - 花芯の色</li>
                 </ul>
 
-                <h3 id="color-palette">3.9 カラーパレット</h3>
+                <h3 id="color-palette">3.12 カラーパレット</h3>
                 <p>
                     カラーパレットには、20色のデフォルトカラーと、最近使った色（最大10色）が表示されます。
                 </p>
@@ -989,7 +1100,7 @@
                     色の四角をクリックすると、その色が選択中の要素に適用されます。最近使った色は自動的に記録されます。
                 </div>
 
-                <h3 id="stencil">3.10 台紙（ステンシル）</h3>
+                <h3 id="stencil">3.13 台紙（ステンシル）</h3>
                 <p>
                     台紙は、作成した花のサイズを確認するための人物シルエットです。
                     キャンバスツールバーの「台紙」メニューから選択できます。
@@ -1025,7 +1136,7 @@
                     キャンバスの空き領域をクリックすると選択が解除されます。
                 </p>
 
-                <h3 id="petal-sizing">3.11 花びらサイズ調整（半くす）</h3>
+                <h3 id="petal-sizing">3.14 花びらサイズ調整（半くす）</h3>
                 <p>
                     半くす配置モードでは、花びらが球面に沿って配置されるため、外側のレイヤーほど大きな生地が必要になります。
                     つまみんは、球面投影に基づいて各レイヤーの生地サイズを自動計算します。
@@ -1196,6 +1307,10 @@
                         <tr>
                             <td>レイヤー選択</td>
                             <td>ダブルクリック</td>
+                        </tr>
+                        <tr>
+                            <td>マーキー選択</td>
+                            <td>キャンバスの空き領域をドラッグ</td>
                         </tr>
                     </tbody>
                 </table>
